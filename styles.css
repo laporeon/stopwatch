@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background: url('./29y8l4ssock51.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-container {
+  width: 70%;
+  height: 80vh;
+  background: white;
+  background: linear-gradient(to right top, rgba(238,121,159, 0.4), rgba(205,104,137, 0.3));
+  border-radius: 2rem;
+  backdrop-filter: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.timer-itens  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-itens > .item {
+  width: 12.5rem;
+  height: 12.5rem;
+  background: linear-gradient(to left bottom, rgba(238,121,159, 1), rgba(205,104,137, 1));
+  margin: 1rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.timer-itens > .item span {
+  font-size: 4rem;
+}
+
+.timer-itens > .item:first-child::after {
+  content: ':';
+  position: absolute;
+  right: -35px;
+  font-size: 4rem;
+}
+
+.timer-itens > .item:last-child::before {
+  content: ':';
+  position: absolute;
+  left: -35px;
+  font-size: 4rem;
+}
+
+.buttons {
+  padding: 1rem;
+}
+
+.buttons > button {
+  width: 120px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin: 0.8rem;
+  background: rgba(130,130,130, 0.6);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.buttons > button:hover {
+  background: linear-gradient(to left bottom, rgba(238,121,159, .8), rgba(205,104,137, .5));
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .timer-container {
+    width: 95vw;
+    height: 70vh;
+  }
+
+  .timer-itens .item {
+    width: 12vh;
+    height: 15vh;
+  }
+  
+}
+
+@media only screen and (max-width: 320px) {
+
+  .buttons {
+    width: 100%;
+    display: flex;
+  }
+}
