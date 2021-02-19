@@ -73,13 +73,13 @@ main {
   padding: 0.8rem;
   border-radius: 5px;
   margin: 0.8rem;
-  background: rgba(130,130,130, 0.6);
+  background: rgba(130,130,130, 0.85);
   font-size: 1.4rem;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .buttons > button:hover {
-  background: linear-gradient(to left bottom, rgba(238,121,159, .8), rgba(205,104,137, .5));
   color: white;
 }
 
