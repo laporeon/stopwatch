@@ -1,6 +1,7 @@
 // SELECIONANDO ELEMENTO
 const start = document.querySelector('#start')
 const pause = document.querySelector('#pause')
+const stop = document.querySelector('#stop')
 const hours = document.querySelector('#hours')
 const minutes = document.querySelector('#minutes')
 const seconds = document.querySelector('#seconds')
@@ -14,13 +15,25 @@ let hour = 0;
 let time;
 
 start.addEventListener('click', () => {
-  start.innerText = "Iniciar";
   time = setInterval(timer, 1000);
+  start.innerText = "Iniciar";
 })
 
 pause.addEventListener('click', () => {
   clearInterval(time);
   start.innerText = "Retomar";
+})
+
+stop.addEventListener('click', () => {
+  mili = 0;
+  second = 0;
+  minute = 0;
+  hour = 0;
+  clearInterval(time);
+  seconds.innerText = "00";
+  minutes.innerText = "00";
+  hours.innerText = "00";
+  start.innerText = "Iniciar";
 })
 
 
