@@ -8,20 +8,18 @@
 main {
   width: 100vw;
   height: 100vh;
-  background: url('./29y8l4ssock51.jpg') no-repeat center;
-  background-size: cover;
+  background: #247841;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .timer-container {
   width: 70%;
-  height: 80vh;
+  height: 70vh;
   background: white;
-  background: linear-gradient(to right top, rgba(238,121,159, 0.4), rgba(205,104,137, 0.3));
+  background: #37B864;
   border-radius: 2rem;
-  backdrop-filter: blur(1.2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,38 +28,20 @@ main {
 
 .timer-itens  {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.timer-itens > .item {
-  width: 12.5rem;
-  height: 12.5rem;
-  background: linear-gradient(to left bottom, rgba(238,121,159, 1), rgba(205,104,137, 1));
-  margin: 1rem;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.timer-itens > span {
+  font-size: 7rem;
   position: relative;
+  color: #11381F;
 }
 
-.timer-itens > .item span {
-  font-size: 4rem;
-}
-
-.timer-itens > .item:first-child::after {
+.timer-itens > span:first-child:after {
   content: ':';
-  position: absolute;
-  right: -35px;
-  font-size: 4rem;
 }
 
-.timer-itens > .item:last-child::before {
+.timer-itens > span:last-child:before {
   content: ':';
-  position: absolute;
-  left: -35px;
-  font-size: 4rem;
 }
 
 .buttons {
@@ -69,11 +49,11 @@ main {
 }
 
 .buttons > button {
-  width: 7.5rem;
+  width: 8rem;
   padding: 0.8rem;
   border-radius: 5px;
   margin: 0.8rem;
-  background: rgba(130,130,130, 0.7);
+  background: rgba(74,247,135, 0.7);
   font-size: 1.4rem;
   cursor: pointer;
   font-weight: 500;
@@ -82,3 +62,16 @@ main {
 .buttons > button:hover {
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+
+  .timer-itens > span  {
+    font-size: 2.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+} 
